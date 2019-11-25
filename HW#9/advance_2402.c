@@ -17,8 +17,12 @@ int main(void)
 {
   char str[100];
 
-  FILE *fp = fopen("data.txt", "rt");
+  FILE *fp = fopen("dataaa.txt", "rt");
   
+  if(fp == NULL){
+    printf("오류 발생");
+    return 0;
+  }
   fgets(str,100,fp);
 
   printf("파일내용 : %s\n", str);
